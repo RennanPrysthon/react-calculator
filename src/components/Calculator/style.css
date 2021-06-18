@@ -1,0 +1,58 @@
+main {
+  background-color: #ffe3dc;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 10px;
+  display: grid;
+  background-color: #5769e9;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 14px -6px #333333;
+  box-shadow: 5px 5px 14px -6px #333333;
+}
+
+.container > input {
+  text-align: right;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 120px;
+  padding: 10px;
+  grid-column: span 4;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 5px 5px 14px -6px #333333;
+  box-shadow: 5px 5px 14px -6px #333333;
+  margin-bottom: 10px;
+}
+
+.container > button {
+  display: flex;
+  border: 0;
+  background-color: inherit;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container > button.reset {
+  grid-column: span 2;
+  width: 120px;
+  background-color: #ff7e0f;
+}
+
+.container > button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.container > button:active {
+  background-color: #ff7e0f;
+}
