@@ -2,23 +2,17 @@ import React, { useRef } from "react";
 import "./style.css";
 
 const Calculator: React.FC = () => {
-  const inputText = useRef<HTMLInputElement>(null);
+  const inputText = useRef<HTMLInputElement>({} as HTMLInputElement);
 
   function add(val: string) {
-    if (!inputText.current) return;
-
     inputText.current.value += val;
   }
 
   function reset() {
-    if (!inputText.current) return;
-
     inputText.current.value = "";
   }
 
   function erease() {
-    if (!inputText.current) return;
-
     let deletedText = inputText.current.value.substring(
       0,
       inputText.current.value.length - 1
@@ -27,7 +21,6 @@ const Calculator: React.FC = () => {
   }
 
   function result() {
-    if (!inputText.current) return;
     if (inputText.current.value === "") return;
 
     inputText.current.value = eval(inputText.current.value);
